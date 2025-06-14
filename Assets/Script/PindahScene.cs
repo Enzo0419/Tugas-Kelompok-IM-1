@@ -17,6 +17,6 @@ public class PindahScene : MonoBehaviour
 
     public void Game()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game0");
     }
 }

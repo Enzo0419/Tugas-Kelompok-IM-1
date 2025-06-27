@@ -44,7 +44,7 @@ public class Obj_Drag : MonoBehaviour
                 SaveObj.GetComponent<SpriteRenderer>().enabled = false;
 
                 GameSystem.instance.DataSaatIni++;
-                GameSystem.instance.DataScore += 200;
+                Data.DataScore += 200;
             }
             else
             {

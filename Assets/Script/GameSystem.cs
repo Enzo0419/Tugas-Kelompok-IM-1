@@ -13,8 +13,7 @@ public class GameSystem : MonoBehaviour
 {
     public static GameSystem instance;
 
-    public static bool NewGame = true;
-    int MaxLevel = 5;
+    int MaxLevel = 4;
 
     public bool GameAktif;
     public bool GameSelesai;
@@ -63,9 +62,8 @@ public class GameSystem : MonoBehaviour
 
     void ResetData()
     {
-        if (NewGame)
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Game0")
         {
-            NewGame = false;
             Data.DataScore = 0;
             Data.DataLevel = 0;
         }
@@ -115,9 +113,9 @@ public class GameSystem : MonoBehaviour
 
     public void SetInfoUI()
     {
-        Teks_Score.text = DataScore.ToString();
+        Teks_Score.text = Data.DataScore.ToString();
 
-        Teks_Level.text = (DataLevel + 1).ToString();
+        Teks_Level.text = (Data.DataLevel + 1).ToString();
     }
 
     // Update is called once per frame
@@ -142,7 +140,7 @@ public class GameSystem : MonoBehaviour
                 }
                 else
                 {
-                    Gui_Transisi.GetComponent<UI_Control>().Btn_Pindah("GameSelesai" + Data.DataLevel);
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("GameSelesai");
                 }
             }
 

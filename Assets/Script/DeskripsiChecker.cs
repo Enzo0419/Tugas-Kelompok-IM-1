@@ -17,7 +17,7 @@ public class DeskripsiChecker : MonoBehaviour
 
         for (int i = 0; i < tombolDeskripsi.Length; i++)
         {
-            int index = i; // Capture index untuk closure
+            int index = i;
             tombolDeskripsi[i].onClick.AddListener(() => DeskripsiDibaca(index));
         }
     }

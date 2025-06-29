@@ -13,11 +13,14 @@ public class Obj_Drag : MonoBehaviour
 
     public int ID;
     public TMP_Text Teks;
+    public GameObject Benar, Salah;
 
 
     void Start()
     {
         SavePosisi = transform.position;
+        Benar.SetActive (false);
+        Salah.SetActive (false);
     }
 
     void Update()
@@ -45,16 +48,22 @@ public class Obj_Drag : MonoBehaviour
 
                 GameSystem.instance.DataSaatIni++;
                 Data.DataScore += 200;
+                Benar.SetActive (false);
+                Benar.SetActive (true);
             }
             else
             {
                 transform.position = SavePosisi;
+                Salah.SetActive (false);
+                Salah.SetActive (true);
             }
 
         }
         else
         {
             transform.position = SavePosisi;
+            Salah.SetActive (false);
+            Salah.SetActive (true);
         }
     }
 

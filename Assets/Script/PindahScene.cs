@@ -22,6 +22,9 @@ public class PindahScene : MonoBehaviour
 
     public void SelectGame()
     {
-        SceneManager.LoadScene("PilihGame");
+    PlayerPrefs.SetInt("Game2Unlocked", 1);
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("PilihGame");
     }
 }

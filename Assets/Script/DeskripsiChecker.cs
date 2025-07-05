@@ -2,11 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
+[System.Serializable]
+public class TombolDeskripsiUI
+{
+    public Button tombol;
+}
 
 public class DeskripsiChecker : MonoBehaviour
 {
-    public Button[] tombolDeskripsi;
+    public TombolDeskripsiUI[] tombolDeskripsi;
     public Button tombolMulaiGame;
+    public GameObject iconGembokMulai;
+    public TMP_Text teksMulai;
 
     private bool[] statusDibaca;
 
@@ -14,11 +23,12 @@ public class DeskripsiChecker : MonoBehaviour
     {
         statusDibaca = new bool[tombolDeskripsi.Length];
         tombolMulaiGame.interactable = false;
+        UpdateMulaiGameUI();
 
         for (int i = 0; i < tombolDeskripsi.Length; i++)
         {
             int index = i;
-            tombolDeskripsi[i].onClick.AddListener(() => DeskripsiDibaca(index));
+            tombolDeskripsi[i].tombol.onClick.AddListener(() => DeskripsiDibaca(index));
         }
     }
 
@@ -36,5 +46,17 @@ public class DeskripsiChecker : MonoBehaviour
         }
 
         tombolMulaiGame.interactable = true;
+        UpdateMulaiGameUI();
+    }
+
+    void UpdateMulaiGameUI()
+    {
+        bool aktif = tombolMulaiGame.interactable;
+
+        if (iconGembokMulai != null)
+            iconGembokMulai.SetActive(!aktif);
+
+        if (teksMulai != null)
+            teksMulai.gameObject.SetActive(aktif);
     }
 }

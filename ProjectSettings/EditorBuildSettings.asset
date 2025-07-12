@@ -24,10 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Game2.unity
     guid: 3b264989598bb33479440d2882566f70
   - enabled: 1
-    path: Assets/Scenes/Game1.unity
-    guid: fd27af9c8dc7581409807ea4c57f76c6
-  - enabled: 1
     path: Assets/Scenes/Game0.unity
+    guid: b1f0ce6870cd32241a17514e1e1b78d8
+  - enabled: 1
+    path: Assets/Scenes/Game1.unity
     guid: bbde800b647905948acdffbf8b0717dc
   - enabled: 1
     path: Assets/Scenes/PilihGame.unity

@@ -428,7 +428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000022738, y: -327}
+  m_AnchoredPosition: {x: -0.000017762, y: -327}
   m_SizeDelta: {x: 100.5017, y: 100.5017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111937973
@@ -945,7 +945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312.92, y: -124.56}
+  m_AnchoredPosition: {x: 305, y: -124.56}
   m_SizeDelta: {x: 536.4438, y: 304.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &203730303
@@ -1853,6 +1853,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feed_benar: {fileID: 628231872}
   feed_salah: {fileID: 1504219408}
+  suaraBenar: {fileID: 8300000, guid: 04264fcf08b057b44b8e3a2cb1e48db3, type: 3}
+  suaraSalah: {fileID: 8300000, guid: 5fe88eac7d866d646b7f1d23166b809f, type: 3}
 --- !u!114 &466451140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,6 +2586,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feed_benar: {fileID: 628231872}
   feed_salah: {fileID: 1504219408}
+  suaraBenar: {fileID: 8300000, guid: 04264fcf08b057b44b8e3a2cb1e48db3, type: 3}
+  suaraSalah: {fileID: 8300000, guid: 5fe88eac7d866d646b7f1d23166b809f, type: 3}
 --- !u!1 &591641286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,6 +3002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 628231873}
   - component: {fileID: 628231874}
+  - component: {fileID: 628231875}
   m_Layer: 5
   m_Name: Benar
   m_TagString: Untagged
@@ -3012,10 +3017,10 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628231872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1665681862}
   m_RootOrder: 0
@@ -3121,6 +3126,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &628231875
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628231872}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cffe268c9c71c2647b358d22521ab511, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &701173724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,6 +3285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feed_benar: {fileID: 628231872}
   feed_salah: {fileID: 1504219408}
+  suaraBenar: {fileID: 8300000, guid: 04264fcf08b057b44b8e3a2cb1e48db3, type: 3}
+  suaraSalah: {fileID: 8300000, guid: 5fe88eac7d866d646b7f1d23166b809f, type: 3}
 --- !u!114 &730283398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4704,7 +4731,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326, y: 167}
+  m_AnchoredPosition: {x: -303.4317, y: 167}
   m_SizeDelta: {x: 101.9381, y: 48.6288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991344747
@@ -6719,7 +6746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326.56833, y: 164.14828}
+  m_AnchoredPosition: {x: -304, y: 164.14828}
   m_SizeDelta: {x: 124.8713, y: 65.5163}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449644738
@@ -6795,7 +6822,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312.91705, y: 156.99677}
+  m_AnchoredPosition: {x: 304.99707, y: 156.99677}
   m_SizeDelta: {x: 109.4894, y: 35.9475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1489887045
@@ -6846,6 +6873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504219409}
   - component: {fileID: 1504219410}
+  - component: {fileID: 1504219413}
   m_Layer: 5
   m_Name: Salah
   m_TagString: Untagged
@@ -6862,8 +6890,8 @@ RectTransform:
   m_GameObject: {fileID: 1504219408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1665681862}
   m_RootOrder: 1
@@ -6969,6 +6997,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1504219413
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504219408}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cffe268c9c71c2647b358d22521ab511, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1542030741
 GameObject:
   m_ObjectHideFlags: 0
@@ -7495,7 +7543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -326, y: -124.55999}
+  m_AnchoredPosition: {x: -303.4317, y: -124.55999}
   m_SizeDelta: {x: 502.6377, y: 304.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1628636529
@@ -8039,6 +8087,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   feed_benar: {fileID: 628231872}
   feed_salah: {fileID: 1504219408}
+  suaraBenar: {fileID: 8300000, guid: 04264fcf08b057b44b8e3a2cb1e48db3, type: 3}
+  suaraSalah: {fileID: 8300000, guid: 5fe88eac7d866d646b7f1d23166b809f, type: 3}
 --- !u!114 &1685897697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8826,7 +8876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312.91904, y: 157}
+  m_AnchoredPosition: {x: 304.99905, y: 157}
   m_SizeDelta: {x: 130.2139, y: 48.8206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864446392

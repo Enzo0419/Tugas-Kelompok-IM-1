@@ -6,32 +6,51 @@ using UnityEngine.UI;
 public class jawab : MonoBehaviour
 {
     public GameObject feed_benar, feed_salah;
-    // Start is called before the first frame update
+    public AudioClip suaraBenar;
+    public AudioClip suaraSalah;
+    private AudioSource audioSource;
+
     void Start()
     {
-        feed_benar.SetActive (false);
-        feed_salah.SetActive (false);
+        feed_benar.SetActive(false);
+        feed_salah.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void jawaban(bool jawab){
-        if(jawab) {
-            feed_benar.SetActive (false);
-            feed_benar.SetActive (true);
-            int skor = PlayerPrefs.GetInt ("skor")+200;
-            PlayerPrefs.SetInt ("skor", skor);
+    public void jawaban(bool jawab)
+    {
+        StartCoroutine(HandleJawaban(jawab));
+    }
+
+    IEnumerator HandleJawaban(bool jawab)
+    {
+        if (jawab)
+        {
+            feed_benar.SetActive(true);
+
+            if (audioSource != null && suaraBenar != null)
+                audioSource.PlayOneShot(suaraBenar);
+
+            int skor = PlayerPrefs.GetInt("skor") + 200;
+            PlayerPrefs.SetInt("skor", skor);
             PlayerPrefs.Save();
 
-        } else{
-            feed_salah.SetActive (false);
-            feed_salah.SetActive (true);
+            yield return new WaitForSeconds(1f); // waktu tampil feedback
+            feed_benar.SetActive(false);
         }
-        gameObject.SetActive (false);
-        transform.parent.GetChild (gameObject.transform.GetSiblingIndex () + 1).gameObject.SetActive (true);
-    }
+        else
+        {
+            feed_salah.SetActive(true);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            if (audioSource != null && suaraSalah != null)
+                audioSource.PlayOneShot(suaraSalah);
+
+            yield return new WaitForSeconds(1f); // waktu tampil feedback
+            feed_salah.SetActive(false);
+        }
+
+        // lanjut soal berikutnya
+        gameObject.SetActive(false);
+        transform.parent.GetChild(transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
     }
 }

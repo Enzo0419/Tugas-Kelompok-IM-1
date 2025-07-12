@@ -6,7 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameSelesai.unity
+    path: Assets/Scenes/GameSelesai2.unity
+    guid: 60089e69920bacc46b341e0df30254c5
+  - enabled: 1
+    path: Assets/Scenes/Pilgan.unity
+    guid: efa1379624c6ee148ae9a162262bce71
+  - enabled: 1
+    path: Assets/Scenes/GameSelesai1.unity
     guid: 48d2c4161d787a547953cc7bb7fdbdfe
   - enabled: 1
     path: Assets/Scenes/Game4.unity
@@ -32,4 +38,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Peta.unity
     guid: f68f8a74c84977541a577fcf9bd349ce
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 482b1cd40f6476a4eb4d3d787aaa5c21, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: f6c55dd5d68b11c4e88e56ebb36df42a, type: 2}

@@ -27,4 +27,14 @@ public class PindahScene : MonoBehaviour
 
     SceneManager.LoadScene("PilihGame");
     }
+
+    public void Game2()
+    {
+        SceneManager.LoadScene("PilGan");
+    }
+
+    public void GameSelesai2()
+    {
+        SceneManager.LoadScene("GameSelesai2");
+    }
 }

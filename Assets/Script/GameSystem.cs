@@ -140,7 +140,7 @@ public class GameSystem : MonoBehaviour
                 }
                 else
                 {
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("GameSelesai");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("GameSelesai1");
                 }
             }
 

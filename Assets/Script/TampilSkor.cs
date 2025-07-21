@@ -9,7 +9,7 @@ public class TampilSkor : MonoBehaviour
 
     void Start()
     {
-        int skor = PlayerPrefs.GetInt("skor", 0); // Ambil skor tersimpan
+        int skor = PlayerPrefs.GetInt("skor", 0);
         skorText.text = skor.ToString();
     }
 }

@@ -4,13 +4,13 @@ using UnityEngine.EventSystems;
 
 public class HoverBtn : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    public CanvasGroup normalGroup; // untuk gambar bulat
-    public CanvasGroup pressGroup;  // untuk gambar persegi
+    public CanvasGroup normalGroup;
+    public CanvasGroup pressGroup;
     public float fadeDuration = 0.2f;
 
     void Start()
     {
-        SetGroup(pressGroup, 0f, false); // Sembunyikan dan non-interactable saat awal
+        SetGroup(pressGroup, 0f, false);
     }
 
     public void OnPointerDown(PointerEventData eventData)

@@ -35,7 +35,7 @@ public class jawab : MonoBehaviour
             PlayerPrefs.SetInt("skor", skor);
             PlayerPrefs.Save();
 
-            yield return new WaitForSeconds(1f); // waktu tampil feedback
+            yield return new WaitForSeconds(1f);
             feed_benar.SetActive(false);
         }
         else
@@ -45,11 +45,10 @@ public class jawab : MonoBehaviour
             if (audioSource != null && suaraSalah != null)
                 audioSource.PlayOneShot(suaraSalah);
 
-            yield return new WaitForSeconds(1f); // waktu tampil feedback
+            yield return new WaitForSeconds(1f);
             feed_salah.SetActive(false);
         }
 
-        // lanjut soal berikutnya
         gameObject.SetActive(false);
         transform.parent.GetChild(transform.GetSiblingIndex() + 1).gameObject.SetActive(true);
     }
